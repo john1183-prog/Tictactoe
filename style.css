@@ -1,0 +1,144 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.navigationbar{
+  padding: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(250, 244, 244);
+}
+.navigationbar .scores{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.navigationbar .scores p{
+  padding: 3px;
+  text-align: center;
+  background-color: lightblue;
+  width: 100px;
+}
+.navigationbar button{
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid black;
+}
+.navigationbar .p{
+  text-align: center;
+}
+.navigationbar .drop{
+  display: flex;
+  gap: 2px;
+}
+.navigationbar .drop button, #double{
+  border: 2px solid gray;
+}
+.navigationbar button:hover{
+  color: white;
+  background-color: black;
+}
+.navigationbar button:active{
+  color: white;
+  background-color: gray;
+}
+.bot-chat{
+  width: 500px;
+  font-size: 20px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid black;
+  background-color: rgb(238, 235, 235);
+  border-radius: 20px;
+}
+.bot-chat header{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.main button{
+  color: blue;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+}
+.one{
+  border: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.two{
+  border-top: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+.three{
+  border: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+.four{
+  border-left: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.five{
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.six{
+  border-right: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+.seven{
+  border-left: none;
+  border-bottom: none;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+.eight{
+  border-bottom: none;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+.nine{
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+.xwins, .owins, .draws{
+  color: blue;
+}
+@media screen and (max-width:800px){
+  .navigationbar{
+  padding: 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(250, 244, 244);
+  gap: 5px;
+  }
+  .bot-chat{
+    width: 90vw;
+  }
+}

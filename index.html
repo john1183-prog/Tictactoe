@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tic-tac-toe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigationbar">
+        <div>
+          <p>Pick your choice here: </p>
+          <div class="drop">
+            <button onclick="chosen(this)" id="xbut">Play as X</button>
+            <button onclick="chosen(this)" id="obut">Play as O</button>
+            <button onclick="chosen(this)" id = "double">2 players</button>
+          </div>
+        </div>
+        <div class="scores">
+          <p class="one">X</p>
+          <p class="two">O</p>
+          <p class="three">Draw</p>
+          <p class="xwins seven" id="xwins">0</p>
+          <p class="owins eight" id="owins">0</p>
+          <p class="draws nine" id="draws">0</p>
+        </div>
+      </div>
+      <div class="main">
+        <button onclick="marki(this)" class="one"></button>
+        <button onclick="marki(this)" class="two"></button>
+        <button onclick="marki(this)" class="three"></button>
+        <button onclick="marki(this)" class="four"></button>
+        <button onclick="marki(this)" class="five"></button>
+        <button onclick="marki(this)" class="six"></button>
+        <button onclick="marki(this)" class="seven"></button>
+        <button onclick="marki(this)" class="eight"></button>
+        <button onclick="marki(this)" class="nine"></button>
+      </div>
+      <div class="bot-chat">
+        <header>TicTacBot:</header>
+        <p>Hello! I'm TicTacBot Let's play a game<br>Pick your choice above</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
