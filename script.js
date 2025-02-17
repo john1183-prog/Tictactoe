@@ -122,13 +122,28 @@ function botplay(mark){
     }
   }
   if (stop == false){
+    let played = false
     botChat.innerHTML = "I'll just play anywhere!"
     console.log("else")
-    for (t of buttons) {
-      if (t.innerHTML == ""){
-        t.innerHTML = mark
-        stop = true
-        break
+    let unoccupieddiags = [buttons[0], buttons[2], buttons[6], buttons[8]].filter(x => {return x.innerHTML == ""})
+    if (unoccupieddiags.length > 1) {
+      for (let i = 0; i < 5; i++) {
+        let rand = Math.floor(Math.random() * unoccupieddiags.length)
+        if (unoccupieddiags[rand].innerHTML == "" && played == false){
+          unoccupieddiags[rand].innerHTML = mark
+          stop = true
+          played = true
+          break
+        }
+      }
+    }
+    if (!played){
+      for (t of buttons) {
+        if (t.innerHTML == ""){
+          t.innerHTML = mark
+          stop = true
+          break
+        }
       }
     }
   }
