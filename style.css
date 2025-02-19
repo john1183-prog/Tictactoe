@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .container{
+  background-color: burlywood;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,13 +14,20 @@
 .main{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+  box-shadow: 1px 10px 20px;
+  background-color: whitesmoke;
+  padding: 20px;
 }
 .navigationbar{
+  border-radius: 20px;
   padding: 20px;
-  width: 100vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
   background-color: rgb(250, 244, 244);
+  border-bottom: 3px solid brown;
+  border-right: 3px solid brown;
 }
 .navigationbar .scores{
 display: grid;
@@ -30,7 +38,9 @@ width: 30%;
 .navigationbar .scores p{
   padding: 3px;
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(218, 218, 218);
+  border-color: black;
+  border-width: 1px;
 }
 .navigationbar button{
   padding: 8px 16px;
@@ -60,71 +70,79 @@ width: 30%;
   font-size: 20px;
   color: blue;
   padding: 15px;
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: rgb(238, 235, 235);
   border-radius: 20px;
+  border-bottom-left-radius: 0px;
+}
+.bottom{
+  width: 50vw;
+  display: flex;
+  justify-content: space-evenly;
 }
 .bot-chat header{
+  display: flex;
+  align-items: center;
   font-size: 15px;
   margin-bottom: 10px;
 }
 .main button{
   color: blue;
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
 }
 .one{
   border: none;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 2px solid brown;
+  border-right: 2px solid brown;
 }
 .two{
   border-top: none;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-bottom: 2px solid brown;
+  border-right: 2px solid brown;
+  border-left: 2px solid brown;
 }
 .three{
   border: none;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  border-bottom: 2px solid brown;
+  border-left: 2px solid brown;
 }
 .four{
   border-left: none;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 2px solid brown;
+  border-right: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .five{
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-left: 2px solid brown;
+  border-bottom: 2px solid brown;
+  border-right: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .six{
   border-right: none;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 2px solid brown;
+  border-left: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .seven{
   border-left: none;
   border-bottom: none;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-right: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .eight{
   border-bottom: none;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
+  border-right: 2px solid brown;
+  border-left: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .nine{
   border-right: none;
   border-bottom: none;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
+  border-left: 2px solid brown;
+  border-top: 2px solid brown;
 }
 .xwins, .owins, .draws{
   color: blue;
@@ -133,18 +151,28 @@ width: 30%;
 @media screen and (max-width:800px){
   .navigationbar{
   padding: 20px;
-  width: 90vw;
+  width: 95vw;
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(250, 244, 244);
   gap: 5px;
   }
   .bot-chat{
-    width: 90vw;
+    width: 80%;
   }
   .navigationbar .scores{
-    width: 70%;
-    }
+    width: 40%;
+  }
+  .bottom{
+    width: 90vw;
+  }
+}
+@media screen and (max-width:600px){
+  .container{
+    font-size: 12px;
+  }
+  .drop button{
+    font-size: 12px;
+  }
 }
