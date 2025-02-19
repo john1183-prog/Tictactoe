@@ -22,7 +22,7 @@ var playX
 var diag1 = true
 var diag2 = true
 var validArray = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-var edgesarray = [1, 3, 5, 7]
+var edgesarray = [buttons[1], buttons[3], buttons[5], buttons[7]]
 function marki(self){
   botChat.innerHTML = "Pick your choice above"
   if (playX == true && !gameOver && self.innerHTML == ""){
@@ -87,14 +87,18 @@ function botplay(mark){
     }else if (buttons[0].innerHTML === buttons[8].innerHTML && buttons[0].innerHTML != "" && diag1 == true){
       botChat.innerHTML = "I hope this isn't a trick"
       console.log("diagonal 0")
-      // ran = Math.floor(Math.random() * edgesarray.length)
       if (buttons[4].innerHTML == "") {
         buttons[4].innerHTML = mark
       } else {
-        for (n of edgesarray) {
-          if (buttons[n].innerHTML == ""){
-            buttons[n].innerHTML = mark
-            break
+        let unoccuppied = edgesarray.filter(x => {return x.innerHTML == ""})
+        if (unoccuppied.length > 1) {
+          for (let i = 0; i < 5; i++) {
+            let rand = Math.floor(Math.random() * unoccuppied.length)
+            if (unoccuppied[rand].innerHTML == ""){
+              unoccuppied[rand].innerHTML = mark
+              stop = true
+              break
+            }
           }
         }
       }
@@ -103,14 +107,19 @@ function botplay(mark){
     }else if (buttons[2].innerHTML === buttons[6].innerHTML && buttons[2].innerHTML != "" && diag2 == true){
       botChat.innerHTML = "This isn't a trick, right?"
       console.log("diagonal 2")
-      ran = Math.floor(Math.random() * edgesarray.length)
+      let rand = Math.floor(Math.random() * edgesarray.length)
       if (buttons[4].innerHTML == "") {
         buttons[4].innerHTML = mark
       } else {
-        for (n of edgesarray) {
-          if (buttons[n].innerHTML == ""){
-            buttons[n].innerHTML = mark
-            break
+        let unoccuppied = edgesarray.filter(x => {return x.innerHTML == ""})
+        if (unoccuppied.length > 1) {
+          for (let i = 0; i < 5; i++) {
+            let rand = Math.floor(Math.random() * unoccuppied.length)
+            if (unoccuppied[rand].innerHTML == ""){
+              unoccuppied[rand].innerHTML = mark
+              stop = true
+              break
+            }
           }
         }
       }
