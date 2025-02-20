@@ -1,9 +1,10 @@
 TIC-TAC-TOE GAME
 
-OVERVIEW
+Overview
+
 This is a simple Tic-Tac-Toe game with both single-player (against AI) and multiplayer (two-player) modes. It is designed for fun and easy gameplay.
 
-FEATURES
+Features
 1. Single-player mode: Play against a basic AI.
 
 2. Two-player mode: Play with a friend on the same device.
@@ -21,12 +22,13 @@ How to Play
 
 3. Win the game by getting three of your marks in a row, column, or diagonal.
 
-
-
 Contributing
+
 This is a personal project, and I am not accepting contributions at this time.
 
+
 License
+
 This project is for personal use only and is not licensed for modification or redistribution.
 
 
