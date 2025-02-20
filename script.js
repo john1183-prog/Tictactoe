@@ -164,6 +164,7 @@ function botplay(mark){
 
 function chosen(self){
   gameOver = false
+  restart()
   optbutarr.forEach(x => {
     x.style.borderColor = "gray"
   })
