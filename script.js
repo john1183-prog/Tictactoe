@@ -170,6 +170,7 @@ function chosen(self){
   switch (self) {
 
     case buttono:
+      restart()
       botsay("Ok then, I play X")
       bot = true
       playX = true
@@ -179,6 +180,7 @@ function chosen(self){
       break;
   
     case buttonx:
+      restart()
       botsay("Great choice!<br>I'm playing O")
       playX = true
       bot = true
@@ -186,6 +188,7 @@ function chosen(self){
       break;
 
     case buttonbot:
+      restart()
       botsay("Have fun!")
       bot = false
       playX = true
