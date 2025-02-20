@@ -42,7 +42,7 @@ function marki(self){
   if (Array.from(buttons).every(x => {return x.innerHTML != ""})){
     gameOver = true
     draws.innerHTML ++
-    botChat.innerHTML = "A draw!"
+    botChat.innerHTML = "It's a draw!"
   }
   if (gameOver) {
     restart()
@@ -84,7 +84,7 @@ function botplay(mark){
       console.log("fill middle")
       buttons[4].innerHTML = mark
       stop = true
-    }else if (buttons[0].innerHTML === buttons[8].innerHTML && buttons[0].innerHTML != "" && diag1 == true){
+    }else if (buttons[0].innerHTML === buttons[8].innerHTML && buttons[0].innerHTML != "" && diag1){
       botChat.innerHTML = "I hope this isn't a trick"
       console.log("diagonal 0")
       if (buttons[4].innerHTML == "") {
@@ -104,7 +104,7 @@ function botplay(mark){
       }
       diag1 = false
       stop = true
-    }else if (buttons[2].innerHTML === buttons[6].innerHTML && buttons[2].innerHTML != "" && diag2 == true){
+    }else if (buttons[2].innerHTML === buttons[6].innerHTML && buttons[2].innerHTML != "" && diag2){
       botChat.innerHTML = "This isn't a trick, right?"
       console.log("diagonal 2")
       let rand = Math.floor(Math.random() * edgesarray.length)
@@ -170,7 +170,6 @@ function chosen(self){
   switch (self) {
 
     case buttono:
-      restart()
       botsay("Ok then, I play X")
       bot = true
       playX = true
@@ -180,7 +179,6 @@ function chosen(self){
       break;
   
     case buttonx:
-      restart()
       botsay("Great choice!<br>I'm playing O")
       playX = true
       bot = true
@@ -188,7 +186,6 @@ function chosen(self){
       break;
 
     case buttonbot:
-      restart()
       botsay("Have fun!")
       bot = false
       playX = true
@@ -205,6 +202,8 @@ function botsay(chat){
 }
 
 function restart(){
+  diag1 = true
+  diag2 = true
   cleared = true
   optbutarr.forEach(x => {
     x.style.borderColor = "gray"
