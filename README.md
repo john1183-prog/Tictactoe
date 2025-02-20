@@ -1,10 +1,10 @@
-Tic-Tac-Toe Game
+TIC-TAC-TOE GAME
 
-Overview
+OVERVIEW
 
 This is a simple Tic-Tac-Toe game with both single-player (against AI) and multiplayer (two-player) modes. It is designed for fun and easy gameplay, making it a great project for learning and practicing coding.
 
-Features
+FEATURES
 
 Single-player mode: Play against a basic AI.
 
@@ -16,23 +16,6 @@ Win detection and automatic restart option.
 
 Lightweight and fast execution.
 
-
-Installation
-
-Clone the Repository
-
-git clone https://github.com/yourusername/tictactoe.git
-cd tictactoe
-
-Run the Game
-
-If it's a web-based game:
-
-open index.html
-
-If it's a Python-based game:
-
-python tictactoe.py
 
 How to Play
 
