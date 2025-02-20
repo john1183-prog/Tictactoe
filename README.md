@@ -14,7 +14,6 @@ FEATURES
 
 5. Lightweight and fast execution.
 
-
 How to Play
 1. Start the game and choose how you want to play.
 
